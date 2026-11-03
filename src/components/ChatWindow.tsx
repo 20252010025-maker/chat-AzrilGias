@@ -26,14 +26,12 @@ export default function ChatWindow({ messages }: { messages: Message[] }) {
       {messages.length === 0 ? (
         <div className="flex items-center justify-center h-full">
           <div className="text-center">
-            <div className="bg-blue-100 dark:bg-blue-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <i className="fas fa-robot text-3xl text-blue-600 dark:text-blue-400"></i>
+            <div className="bg-gradient-to-br from-blue-500 via-sky-500 to-cyan-400 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-500/25">
+              <i className="fas fa-robot text-3xl text-white"></i>
             </div>
-            <h2 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Selamat datang!</h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-sm">
-              Halloo.. Saya adalah Sontoloyo AI<br>
-              </br>
-              Anda bisa bertanya tentang apapun terkait informasi yang ada di dalam konten blog saya!
+            <h2 className="text-2xl font-bold mb-2 text-slate-900 dark:text-white">Halo, Azril di sini!</h2>
+            <p className="text-slate-600 dark:text-slate-300 max-w-md mx-auto leading-relaxed">
+              Saya adalah Azril AI Asisten. Saya siap membantu menjawab pertanyaan, memberikan ide, dan memudahkan aktivitasmu dengan gaya yang cepat, ramah, dan modern.
             </p>
           </div>
         </div>
@@ -46,8 +44,8 @@ export default function ChatWindow({ messages }: { messages: Message[] }) {
           >
             <div
               className={`w-8 h-8 rounded-full flex items-center justify-center text-white shrink-0 ${message.role === 'user'
-                ? 'bg-slate-700 dark:bg-slate-600'
-                : 'bg-blue-600 dark:bg-blue-700'
+                ? 'bg-slate-700 dark:bg-sky-600'
+                : 'bg-gradient-to-br from-blue-500 to-cyan-500 dark:from-sky-500 dark:to-blue-600'
                 }`}
             >
               <i
@@ -56,9 +54,9 @@ export default function ChatWindow({ messages }: { messages: Message[] }) {
               ></i>
             </div>
             <div
-              className={`max-w-[80%] px-4 py-3 rounded-2xl ${message.role === 'user'
-                ? 'bg-blue-600 text-white rounded-tr-none'
-                : 'bg-white dark:bg-slate-800 text-gray-900 dark:text-gray-100 rounded-tl-none border border-gray-200 dark:border-slate-700'
+              className={`max-w-[80%] px-4 py-3 rounded-2xl shadow-sm ${message.role === 'user'
+                ? 'bg-gradient-to-br from-blue-600 to-blue-500 text-white rounded-tr-none'
+                : 'bg-white/95 dark:bg-slate-800/95 text-slate-900 dark:text-slate-100 rounded-tl-none border border-blue-100 dark:border-slate-700'
                 }`}
             >
               <div className="text-sm leading-relaxed whitespace-pre-wrap break-words">

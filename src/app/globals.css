@@ -2,14 +2,32 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --navbar-height: 4rem; /* 64px = h-16 */
+  --background: linear-gradient(180deg, #eef8ff 0%, #f9fbff 100%);
+  --foreground: #0f172a;
+  --surface: rgba(255, 255, 255, 0.8);
+  --surface-strong: #ffffff;
+  --surface-alt: #eaf4ff;
+  --primary: #2563eb;
+  --primary-strong: #1d4ed8;
+  --primary-soft: #dbeafe;
+  --border: rgba(59, 130, 246, 0.18);
+  --muted: #4b5f7a;
+  --shadow: rgba(37, 99, 235, 0.14);
+  --navbar-height: 4rem;
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: linear-gradient(180deg, #06192d 0%, #0b1f37 32%, #12273f 100%);
+  --foreground: #eaf4ff;
+  --surface: rgba(15, 23, 42, 0.82);
+  --surface-strong: #12233f;
+  --surface-alt: #0d2341;
+  --primary: #60a5fa;
+  --primary-strong: #3b82f6;
+  --primary-soft: rgba(96, 165, 250, 0.18);
+  --border: rgba(96, 165, 250, 0.22);
+  --muted: #a9c7ee;
+  --shadow: rgba(2, 6, 23, 0.52);
 }
 
 @theme inline {
@@ -36,9 +54,27 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  background-attachment: fixed;
   /* iOS safe area support */
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(96, 165, 250, 0.45);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 /* Ensure fixed nav always on top */

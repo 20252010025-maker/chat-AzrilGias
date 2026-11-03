@@ -1,13 +1,13 @@
 {
-  "name": "Sontoloyo AI",
-  "short_name": "Sontoloyo AI",
-  "description": "Sontoloyo AI - AI Chatbot untuk blog adi-muhamad.my.id",
+  "name": "Azril AI Asisten",
+  "short_name": "Azril AI",
+  "description": "Azril AI Asisten - chatbot modern yang membantu dengan gaya ramah dan profesional",
   "display": "standalone",
   "start_url": "/",
   "scope": "/",
   "orientation": "portrait",
-  "theme_color": "#2563eb",
-  "background_color": "#0f172a",
+  "theme_color": "#1d4ed8",
+  "background_color": "#eaf4ff",
   "categories": ["productivity", "utilities"],
   "icons": [
     {
